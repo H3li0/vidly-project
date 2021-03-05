@@ -18,6 +18,16 @@ class Movies extends Component {
               <th></th>
             </tr>
           </thead>
+          <tbody>
+            {this.state.movies.map((movie) => (
+              <tr key={movie._id}>
+                <td>{movie.title}</td>
+                <td>{movie.genre.name}</td>
+                <td>{movie.numberInStock}</td>
+                <td>{movie.dailyRentalRate}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </React.Fragment>
     );
