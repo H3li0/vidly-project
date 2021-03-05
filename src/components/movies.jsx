@@ -6,12 +6,17 @@ class Movies extends Component {
     movies: getMovies(),
   };
   handleDelete = (movie) => {
-    const movies = this.state.movies.filter(m => m._id !== movie._id);
-    this.setState({movies});
+    const movies = this.state.movies.filter((m) => m._id !== movie._id);
+    this.setState({ movies });
   };
   render() {
+    const { length: numMovies } = this.state.movies;
+
+    if (numMovies === 0) return <p>There are no movies in database.</p>;
+
     return (
       <React.Fragment>
+        <p>There are {numMovies} movies in database.</p>
         <table className="table">
           <thead>
             <tr>
