@@ -5,7 +5,17 @@ class Movies extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Movie Component</h1>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Genre</th>
+              <th>Stock</th>
+              <th>Rate</th>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
       </React.Fragment>
     );
   }
